@@ -15,7 +15,7 @@ Za každú správnu odpoveď hráč získava 4 body. Za každú prvú správnu o
 ## Takto to funguje
 
 - stránka pre správcu kvízu: https://tiborepcek.com/kviz-demo/sprava.php (heslo: `demo`)
-- stránka pre moderátora kvízu: https://tiborepcek.com/kviz-demo/moderator.php (heslo: `demo`)
+- stránka pre moderátora kvízu: https://tiborepcek.com/kviz-demo/moderator.php?otazka=1 (heslo: `demo`)
 - stránka na prihlásenie hráča: https://tiborepcek.com/kviz-demo/
 
 ## Závislosti na kóde tretích strán
