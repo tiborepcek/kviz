@@ -32,7 +32,7 @@ Sada otázok (súbor s koncovkou tsv, čiže kvíz) je zapísaná v konfiguračn
 
 ## Obslužná časť kvízu
 
-1. `hrac.php` je pre hráča, využíva iba `zapis_odpoved.php` a ideálne je načítať ho cez mobil, preto obsahuje QR kód s URL generovaný pomocou phpqrcode.php. V prípade, že mobil nedokáže URL z QR kódu načítať, URL je pod QR kódom aj vypísaná. Pod URL je ešte v zátvorkách zapísaný názov kvízu (čiže sady otázok).
+1. `hrac.php` je pre hráča, využíva iba `zapis_odpoved.php` a ideálne je načítať ho cez mobil, preto obsahuje QR kód s URL generovaný pomocou `phpqrcode.php`. V prípade, že mobil nedokáže URL z QR kódu načítať, URL je pod QR kódom aj vypísaná. Pod URL je ešte v zátvorkách zapísaný názov kvízu (čiže sady otázok).
 1. `moderator.php je` pre moderátora, obsahuje znenie otázok a možností odpovedí, využíva `zablokuj_otazku.php`, `odblokuj_otazku.php`, `odblokuj_vsetky_otazky.php` a ideálne je načítať ho na veľkom monitore (TV), aby hráči na obsah dobre videli. Online moderovanie je možné cez aplikácie ako napr. [Zoom](https://zoom.us/).
 1. `sprava.php` je pre administrátora kvízov. Umožňuje nahrávať nové kvízy (text v tsv, obrázky v jpg a png, zvuk v mp3 a video v mp4) pomocou `nahraj_subor.php`, vybrať kvíz (použiť) pomocou `zapis_nazov_kvizu.php`, upravovať text nahraných kvízov pomocou `uprav_subor.php` a `zapis_upravu_suboru.php`, zobrazovať odpovede pomocou `zobraz_odpovede.php` a vymazať odpovede pomocou `vymaz_subor.php`.
 
