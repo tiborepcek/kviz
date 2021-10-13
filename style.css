@@ -1,0 +1,34 @@
+body {font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: black; color: white;}
+form textarea {width: 100%; height: 78%; box-sizing: border-box;}
+fieldset {border: 1px solid white; max-width: 450px; padding: 16px;}
+a:link, a:visited {background-color: white; color: black; padding: 4px 15px; text-decoration: none; display: inline-block;}
+a:hover, a:active, button:hover, input[type=submit]:hover, li:hover {background-color: green;}
+a.obycajnyHover:link, a.obycajnyHover:visited {padding: 0; text-decoration: underline; background-color: black; color: white;}
+a.obycajnyHover:hover, a.obycajnyHover:active {color: green;}
+h1 {text-align: center; margin-top: 25px}
+img, audio, video {max-width: 100%}
+.stlpce {display: flex; flex-wrap: wrap; padding-bottom: 0.83em}
+.vlavo {flex: 56%; max-width: 56%; text-align: left; padding-right: 0.8em; border-top: 1px solid white; border-bottom: 1px solid white;}
+.vpravo {flex: 40%; text-align: left; padding-top: 0.40em; padding-bottom: 0.83em; padding-left: 0.83em; border-left: 1px solid white; border-top: 1px solid white; border-bottom: 1px solid white;}
+.otazka {text-align: center; line-height: 1.7}
+.odpovede {display: inline-block; text-align: left; line-height: 1.7}
+button, input[type=submit], input[type=button] {padding: 16px 32px; margin: 4px 2px; cursor: pointer; text-align: center; font-family: inherit; font-size: 100%; -webkit-appearance: none; -webkit-box-sizing: border-box; background-color: white; color: black}
+.dolezite {color: red}
+.centrovane {text-align: center}
+.dolava {text-align: left}
+.lineHeight2 {line-height: 2}
+.visibilityHidden {visibility: hidden}
+.overflowXAuto {overflow-x: auto}
+.vysokeRiadky {line-height: 1.7}
+.borderTopBottom {border-bottom: 1px solid white; border-top: 1px solid white;}
+.marginTop {margin-top: 1em;}
+.marginBottom {margin-bottom: 1em;}
+.paddingTop {padding-top: 1em;}
+.paddingBottom {padding-bottom: 1em;}
+.skryte1, .skryte2, .skryte3, .skryte4 {visibility: hidden;}
+.pismenoOtazky {background-color: white; color: black; padding: 4px 15px;}
+table {border-collapse: collapse; margin-left:auto; margin-right:auto;}
+table, th, td {border: 1px solid white;}
+th {height: 50px;}
+th, td {padding: 15px; text-align: left;}
+input[type=text], input[type=email] {width: 100%; padding: 12px 20px; margin: 8px 0; box-sizing: border-box; border: 2px solid red;	border-radius: 4px; background: yellow; color: red; font-size: xx-large}
