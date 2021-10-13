@@ -25,10 +25,34 @@ Za každú správnu odpoveď hráč získava 4 body. Za každú prvú správnu o
 
 ## Textové databázové súbory
 
-- otázky sú pripravené vo formáte TSV a vypísať ich je možné pomocou `sprava.php`
-- odpovede sa ukladajú vo formáte CSV a vypísať ich je možné pomocou `sprava.php`
+- otázky sú pripravené vo formáte TSV (tu v súbore [otazky-demo.tsv](https://github.com/tiborepcek/kviz/blob/main/otazky-demo.tsv)) a vypísať ich je možné pomocou `sprava.php`
+- odpovede sa ukladajú vo formáte CSV (tu v súbore [odpovede-demo.csv](https://github.com/tiborepcek/kviz/blob/main/odpovede-demo.csv)) a vypísať ich je možné pomocou `sprava.php`
 
 Sada otázok (súbor s koncovkou tsv, čiže kvíz) je zapísaná v konfiguračnom súbore `kviz.include`, ktorý obsahuje iba názov kvízu. Tento názov je možné prepísať pomocou `sprava.php`. Podľa názvu sa vyberá sada otázok, čiže kvíz.
+
+### Otázky
+
+Otázky spolu so 4 možnosťami odpovedí sú zapísané v súbore s koncovkou TSV (tab-separated values), pričom na konci riadku je písmeno správnej odpovede:
+
+```
+Znenie otázky(tabulátor)Odpoveď A(tabulátor)Odpoveď B(tabulátor)Odpoveď C(tabulátor)Odpoveď D(tabulátor)Písmeno správnej odpovede
+```
+
+### Odpovede
+
+Odpovede sa zapisujú do súboru s koncovkou CSV (comma-separated values) v tomto poradí:
+
+- rok, mesiac a deň (RRRRMMDD)
+- hodina, minúta, sekunda (HHMMSS)
+- názov kvízu (tu `demo`)
+- meno hráča (napr. Tibor)
+- číslo otázky (napr. 1)
+- písmeno označenej odpovede (napr. A)
+- emailová adresa (napr. tiborepcek@gmail.com)
+
+```
+RRRRMMDD,HHMMSS,demo,Tibor,1,A,tiborepcek@gmail.com
+```
 
 ## Obslužná časť kvízu
 
@@ -40,3 +64,4 @@ Sada otázok (súbor s koncovkou tsv, čiže kvíz) je zapísaná v konfiguračn
 
 - `1_stiahni_nazov_kvizu.bat` - stiahne súbor `kviz.include`, ktorý je potrebný pre vytvorenie `poradie.html` pomocou `vyhodnot.au3`
 - `2_stiahni_odpovede.bat` - po ukončení kvízu si moderátor stiahne odpovede (súbor s koncovkou TSV), aby ich mohol vyhodnotiť pomocou `vyhodnot.au3` a výsledok zapísať do `poradie.html`
+- `vyhodnot.au3` - teraz máme všetky potrebné údaje stiahnuté offline a môžeme tak vyhodnotiť zíksané odpovede, pričom výsledok sa zapíše do súboru `poradie.html`
