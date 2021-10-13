@@ -20,23 +20,23 @@ Za každú správnu odpoveď hráč získava 4 body. Za každú prvú správnu o
 
 ## Závislosti na kóde tretích strán
 
-1. Obrázok s QR kódom (zobrazený v súboroch `index.php` a `popis.php`) vytvára [PHP QR Code](https://sourceforge.net/projects/phpqrcode/) - súbor `phpqrcode.php`
-1. Zabezpečenie stránky heslom (súbory `moderator.php` a `sprava.php`) poskytuje [Web Page Password Protect](http://www.zubrag.com/scripts/password-protect.php) - súbor `ochrana.php`
+- Obrázok s QR kódom (zobrazený v súboroch `index.php` a `popis.php`) vytvára [PHP QR Code](https://sourceforge.net/projects/phpqrcode/) - súbor `phpqrcode.php`
+- Zabezpečenie stránky heslom (súbory `moderator.php` a `sprava.php`) poskytuje [Web Page Password Protect](http://www.zubrag.com/scripts/password-protect.php) - súbor `ochrana.php`
 
 ## Textové databázové súbory
 
-1. otázky sú pripravené vo formáte TSV a vypísať ich je možné pomocou `sprava.php`
-1. odpovede sa ukladajú vo formáte CSV a vypísať ich je možné pomocou `sprava.php`
+- otázky sú pripravené vo formáte TSV a vypísať ich je možné pomocou `sprava.php`
+- odpovede sa ukladajú vo formáte CSV a vypísať ich je možné pomocou `sprava.php`
 
 Sada otázok (súbor s koncovkou tsv, čiže kvíz) je zapísaná v konfiguračnom súbore `kviz.include`, ktorý obsahuje iba názov kvízu. Tento názov je možné prepísať pomocou `sprava.php`. Podľa názvu sa vyberá sada otázok, čiže kvíz.
 
 ## Obslužná časť kvízu
 
-1. `hrac.php` je pre hráča, využíva iba `zapis_odpoved.php` a ideálne je načítať ho cez mobil, preto obsahuje QR kód s URL generovaný pomocou `phpqrcode.php`. V prípade, že mobil nedokáže URL z QR kódu načítať, URL je pod QR kódom aj vypísaná. Pod URL je ešte v zátvorkách zapísaný názov kvízu (čiže sady otázok).
-1. `moderator.php` je pre moderátora, obsahuje znenie otázok a možností odpovedí, využíva `zablokuj_otazku.php`, `odblokuj_otazku.php`, `odblokuj_vsetky_otazky.php` a ideálne je načítať ho na veľkom monitore (TV), aby hráči na obsah dobre videli. Online moderovanie je možné cez aplikácie ako napr. [Zoom](https://zoom.us/).
-1. `sprava.php` je pre administrátora kvízov. Umožňuje nahrávať nové kvízy (text v tsv, obrázky v jpg a png, zvuk v mp3 a video v mp4) pomocou `nahraj_subor.php`, vybrať kvíz (použiť) pomocou `zapis_nazov_kvizu.php`, upravovať text nahraných kvízov pomocou `uprav_subor.php` a `zapis_upravu_suboru.php`, zobrazovať odpovede pomocou `zobraz_odpovede.php` a vymazať odpovede pomocou `vymaz_subor.php`.
+- `hrac.php` je pre hráča, využíva iba `zapis_odpoved.php` a ideálne je načítať ho cez mobil, preto obsahuje QR kód s URL generovaný pomocou `phpqrcode.php`. V prípade, že mobil nedokáže URL z QR kódu načítať, URL je pod QR kódom aj vypísaná. Pod URL je ešte v zátvorkách zapísaný názov kvízu (čiže sady otázok).
+- `moderator.php` je pre moderátora, obsahuje znenie otázok a možností odpovedí, využíva `zablokuj_otazku.php`, `odblokuj_otazku.php`, `odblokuj_vsetky_otazky.php` a ideálne je načítať ho na veľkom monitore (TV), aby hráči na obsah dobre videli. Online moderovanie je možné cez aplikácie ako napr. [Zoom](https://zoom.us/).
+- `sprava.php` je pre administrátora kvízov. Umožňuje nahrávať nové kvízy (text v tsv, obrázky v jpg a png, zvuk v mp3 a video v mp4) pomocou `nahraj_subor.php`, vybrať kvíz (použiť) pomocou `zapis_nazov_kvizu.php`, upravovať text nahraných kvízov pomocou `uprav_subor.php` a `zapis_upravu_suboru.php`, zobrazovať odpovede pomocou `zobraz_odpovede.php` a vymazať odpovede pomocou `vymaz_subor.php`.
 
 ### Po ukončení kvízu
 
-1. `1_stiahni_nazov_kvizu.bat` - stiahne súbor `kviz.include`, ktorý je potrebný pre vytvorenie `poradie.html` pomocou `vyhodnot.au3`
-1. `2_stiahni_odpovede.bat` - po ukončení kvízu si moderátor stiahne odpovede (súbor s koncovkou TSV), aby ich mohol vyhodnotiť pomocou `vyhodnot.au3` a výsledok zapísať do `poradie.html`
+- `1_stiahni_nazov_kvizu.bat` - stiahne súbor `kviz.include`, ktorý je potrebný pre vytvorenie `poradie.html` pomocou `vyhodnot.au3`
+- `2_stiahni_odpovede.bat` - po ukončení kvízu si moderátor stiahne odpovede (súbor s koncovkou TSV), aby ich mohol vyhodnotiť pomocou `vyhodnot.au3` a výsledok zapísať do `poradie.html`
