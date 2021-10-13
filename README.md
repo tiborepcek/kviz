@@ -45,10 +45,10 @@ Odpovede sa zapisujú do súboru s koncovkou CSV (comma-separated values) v tomt
 - rok, mesiac a deň (RRRRMMDD)
 - hodina, minúta, sekunda (HHMMSS)
 - názov kvízu (tu `demo`)
-- meno hráča (napr. Tibor)
+- meno hráča (tu `Tibor`)
 - číslo otázky (napr. 1)
 - písmeno označenej odpovede (napr. A)
-- emailová adresa (napr. tiborepcek@gmail.com)
+- emailová adresa (tu `tiborepcek@gmail.com`)
 
 ```
 RRRRMMDD,HHMMSS,demo,Tibor,1,A,tiborepcek@gmail.com
