@@ -20,7 +20,7 @@ Za každú správnu odpoveď hráč získava 4 body. Za každú prvú správnu o
 
 ## Závislosti na kóde tretích strán
 
-- obrázok s QR kódom (zobrazený v súboroch `index.php` a `popis.php`) vytvára [PHP QR Code](https://sourceforge.net/projects/phpqrcode/) - súbor `phpqrcode.php`
+- obrázok s QR kódom (zobrazený v súbore `index.php`) vytvára [PHP QR Code](https://sourceforge.net/projects/phpqrcode/) - súbor `phpqrcode.php`
 - zabezpečenie stránky heslom (súbory `moderator.php` a `sprava.php`) poskytuje [Web Page Password Protect](http://www.zubrag.com/scripts/password-protect.php) - súbor `ochrana.php`
 
 ## Textové databázové súbory
