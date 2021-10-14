@@ -65,3 +65,19 @@ RRRRMMDD,HHMMSS,demo,Tibor,1,A,tiborepcek@gmail.com
 - `1_stiahni_nazov_kvizu.bat` - stiahne súbor `kviz.include`, ktorý je potrebný pre vytvorenie `poradie.html` pomocou `vyhodnot.au3`
 - `2_stiahni_odpovede.bat` - po ukončení kvízu si moderátor stiahne odpovede (súbor s koncovkou TSV), aby ich mohol vyhodnotiť pomocou `vyhodnot.au3` a výsledok zapísať do `poradie.html`
 - `vyhodnot.au3` - teraz máme všetky potrebné údaje stiahnuté offline a môžeme tak vyhodnotiť zíksané odpovede, pričom výsledok sa zapíše do súboru `poradie.html`
+
+## Inštalácia
+
+Jednoducho [stiahnete najnovšiu verziu](https://github.com/tiborepcek/kviz/releases) ako komprimovaný súbor formátu ZIP, súbory rozbalíte a nahráte na hosting do priečinku s názvom `kviz-demo` cez FTP. Potom už len do webového prehliadača zadáte jednu z adries z časti [Takto to funguje](#takto-to-funguje), pričom doménu `tiborepcek.com` nahradíte vlastnou.
+
+Ďalšia možnosť je stiahnuť potrebné súbory cez [Git](https://git-scm.com/). Po pripojení na server cez SSH spustite tento príkaz a všetky potrebné súbory sa stiahnu do priečinka s názvom `kviz`:
+
+```
+git clone https://github.com/tiborepcek/kviz.git
+```
+
+Výhoda stiahnutia súborov cez Git je okrem rýchlosti aj následná jednoduchosť aktualizácie. Stačí, keď v priečinku `kvíz` spustíte tento príkaz a v prípade dostupnej aktualizácie sa jednotlivé súbory aktualizujú na najnovšiu verziu:
+
+```
+git pull
+```
